@@ -6,25 +6,25 @@ This guide explains how to edit and maintain your personal academic and research
 
 ## 1. Quick Reference: Where to Edit What
 
-| Content Item | Source File | Description / Key Fields |
-| :--- | :--- | :--- |
-| **Name & Professional Title** | `_config.yml` | `first_name`, `last_name`, `title` |
-| **Academic Headline / Subtitle** | `_data/profile.yml` & `_pages/about.md` | `headline` |
-| **Home Bio & Research Interests** | `_data/profile.yml` | `bio_p1`, `bio_p2`, `interests` |
-| **Profile Photo** | `assets/img/profile/photo1.jpg` | Referenced in `_data/profile.yml` (`image`) |
-| **Social & Contact Links** | `_data/socials.yml` | `email`, `scholar_userid`, `github_username`, `whatsapp_url` |
-| **Theme / Color Palette** | `assets/css/theme.css` | Dark navy palette variables (`--page-bg`, `--surface-bg`, etc.) |
-| **Education Entries & Degrees** | `_data/education.yml` | `institution`, `degree`, `major`, `cgpa`, `major_gpa`, `dates`, `thesis`, `logo` |
-| **Relevant Coursework** | `_data/coursework.yml` | `category`, `courses` |
-| **Certificates** | `_data/certificates.yml` | `title`, `issuer`, `date`, `credential_id`, `credential_url`, `pdf` |
-| **Research Experience** | `_data/research_experience.yml` | `title`, `role`, `institution`, `contributions`, `outcomes` |
-| **Projects (Individual)** | `_projects/<project_name>.md` | Project frontmatter (`title`, `img`, `category`) and body |
-| **Projects Landing Page** | `_pages/projects.md` | Category tabs, display order |
-| **Publications (BibTeX)** | `_bibliography/papers.bib` | BibTeX entries (`@inproceedings`, `@article`), `selected={true}` |
-| **Author Highlighting** | `_config.yml` | `scholar.last_name`, `scholar.first_name` |
-| **CV Data (Web View)** | `_data/cv.yml` | Canonical RenderCV format (Education, Experience, Skills, etc.) |
-| **CV PDF Download** | `_pages/cv.md` | Uncomment `cv_pdf: /assets/pdf/<file>.pdf` after placing sanitized PDF |
-| **Navigation Order** | `_pages/*.md` | `nav: true`, `nav_order: 1..6` |
+| Content Item                      | Source File                             | Description / Key Fields                                                         |
+| :-------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------- |
+| **Name & Professional Title**     | `_config.yml`                           | `first_name`, `last_name`, `title`                                               |
+| **Academic Headline / Subtitle**  | `_data/profile.yml` & `_pages/about.md` | `headline`                                                                       |
+| **Home Bio & Research Interests** | `_data/profile.yml`                     | `bio_p1`, `bio_p2`, `interests`                                                  |
+| **Profile Photo**                 | `assets/img/profile/photo1.jpg`         | Referenced in `_data/profile.yml` (`image`)                                      |
+| **Social & Contact Links**        | `_data/socials.yml`                     | `email`, `scholar_userid`, `github_username`, `whatsapp_url`                     |
+| **Theme / Color Palette**         | `assets/css/theme.css`                  | Dark navy palette variables (`--page-bg`, `--surface-bg`, etc.)                  |
+| **Education Entries & Degrees**   | `_data/education.yml`                   | `institution`, `degree`, `major`, `cgpa`, `major_gpa`, `dates`, `thesis`, `logo` |
+| **Relevant Coursework**           | `_data/coursework.yml`                  | `category`, `courses`                                                            |
+| **Certificates**                  | `_data/certificates.yml`                | `title`, `issuer`, `date`, `credential_id`, `credential_url`, `pdf`              |
+| **Research Experience**           | `_data/research_experience.yml`         | `title`, `role`, `institution`, `contributions`, `outcomes`                      |
+| **Projects (Individual)**         | `_projects/<project_name>.md`           | Project frontmatter (`title`, `img`, `category`) and body                        |
+| **Projects Landing Page**         | `_pages/projects.md`                    | Category tabs, display order                                                     |
+| **Publications (BibTeX)**         | `_bibliography/papers.bib`              | BibTeX entries (`@inproceedings`, `@article`), `selected={true}`                 |
+| **Author Highlighting**           | `_config.yml`                           | `scholar.last_name`, `scholar.first_name`                                        |
+| **CV Data (Web View)**            | `_data/cv.yml`                          | Canonical RenderCV format (Education, Experience, Skills, etc.)                  |
+| **CV PDF Download**               | `_pages/cv.md`                          | Uncomment `cv_pdf: /assets/pdf/<file>.pdf` after placing sanitized PDF           |
+| **Navigation Order**              | `_pages/*.md`                           | `nav: true`, `nav_order: 1..6`                                                   |
 
 ---
 
@@ -35,7 +35,9 @@ The homepage (`/`) is rendered by `_pages/about.md` following a clean academic r
 To keep the template clean and maintainable, **all editable homepage content lives in structured YAML files**:
 
 ### 1. Biography, Headline, and Interests (`_data/profile.yml`)
+
 Edit `_data/profile.yml` to update your core academic narrative:
+
 ```yaml
 name: "Md. Fahim"
 headline: "BSc in Electrical & Electronic Engineering · Communication & Signal Processing · BUET"
@@ -58,18 +60,22 @@ interests:
 ```
 
 ### 2. Profile Photo (`assets/img/profile/photo1.jpg`)
+
 - To update your portrait, place a new JPG image in `assets/img/profile/` and update `image:` in `_data/profile.yml`.
 - The image is automatically styled via `assets/css/theme.css` with natural height scaling, a subtle `6px` border radius, and card shadow.
 
 ### 3. Contact & Social Links (`_data/socials.yml`)
+
 Edit `_data/socials.yml` to update your icons beneath the profile photo:
+
 ```yaml
 email: mdfahim.buet@gmail.com
 scholar_userid: KKSUYLAAAAAJ
 github_username: fahim06128
 whatsapp_url: https://wa.me/8801957954950
 ```
-*Privacy Note: The WhatsApp link directs users to chat via WhatsApp without exposing your raw phone number in visible page text.*
+
+_Privacy Note: The WhatsApp link directs users to chat via WhatsApp without exposing your raw phone number in visible page text._
 
 ---
 
@@ -78,7 +84,9 @@ whatsapp_url: https://wa.me/8801957954950
 The Education page (`/education/`) is rendered by `_pages/education.md` using three structured data files. You can perform all routine edits without modifying HTML or Liquid templates.
 
 ### 1. Adding or Editing a Degree / Institution (`_data/education.yml`)
+
 All degrees and academic qualifications are managed in `_data/education.yml`:
+
 ```yaml
 - institution: "Bangladesh University of Engineering and Technology (BUET)"
   short_name: "BUET"
@@ -95,29 +103,36 @@ All degrees and academic qualifications are managed in `_data/education.yml`:
 ```
 
 #### Changing Institution Logos
+
 - **Asset directory**: `assets/img/education/`
 - **Recommended format**: Transparent PNG or vector SVG
 - **Recommended dimensions**: ~300×300 px (displayed at 64×64 px with automatic aspect ratio preservation)
 - **Controlling field**: `logo: "assets/img/education/<filename>.png"` (relative to site root)
 
 #### Changing GPA & CGPA
+
 - **Overall CGPA**: Update `cgpa: "3.44 / 4.00"`
 - **Major GPA**: Update `major_gpa: "3.81 / 4.00"`
 - **General GPA (e.g. for high school)**: Update `gpa: "5.00 / 5.00"`
 
 #### Changing Undergraduate Thesis Title
+
 - Update `thesis: "Your New Thesis Title"` in the corresponding institution block.
 
 #### Optional Fields
+
 All fields are optional. If an entry does not have `department`, `major`, `major_gpa`, or `thesis` (such as high school), simply omit the line and it will not render an empty label.
 
 ---
 
 ### 2. Relevant Coursework (`_data/coursework.yml`)
+
 Relevant courses are organized into academic and research-oriented categories in `_data/coursework.yml`.
 
 #### Adding a Course
+
 Add a new item under the appropriate category:
+
 ```yaml
 - category: "Artificial Intelligence, Signal Processing & Biomedical"
   courses:
@@ -129,7 +144,9 @@ Add a new item under the appropriate category:
 ```
 
 #### Adding a New Category
+
 Add a new category block at the desired position in `_data/coursework.yml`:
+
 ```yaml
 - category: "Mathematics & Optimization"
   courses:
@@ -138,15 +155,19 @@ Add a new category block at the desired position in `_data/coursework.yml`:
 ```
 
 #### Moving a Course Between Categories
+
 Simply cut the line `- "Course Name"` from one category's `courses` list and paste it under another category's `courses` list.
 
 ---
 
 ### 3. Certificates (`_data/certificates.yml`)
+
 Certificates and verified professional credentials are listed in `_data/certificates.yml`.
 
 #### Adding a New Certificate
+
 Add a block to `_data/certificates.yml`:
+
 ```yaml
 - title: "Supervised Machine Learning: Regression and Classification"
   issuer: "DeepLearning.AI & Stanford Online"
@@ -160,6 +181,7 @@ Add a block to `_data/certificates.yml`:
 ```
 
 #### Replacing or Adding Certificate PDF Files
+
 1. Save the sanitized public PDF in `assets/pdf/certificates/<certificate-slug>.pdf`.
 2. Update the `pdf:` field in `_data/certificates.yml`:
    ```yaml
@@ -172,6 +194,7 @@ Add a block to `_data/certificates.yml`:
 ## 4. Research Showcase (`/research/`)
 
 The Research page functions as a concise showcase containing two horizontal cards:
+
 1. **Undergraduate Thesis:** Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection
 2. **Ongoing Research:** Weakly Supervised Temporal Action Localization for Non-Intrusive Load Monitoring
 
@@ -200,20 +223,26 @@ All content is decoupled into `_data/research.yml` and rendered dynamically by `
 Both research entries link to dedicated, concise **one-page academic research briefs** in PDF format via the `View Research Brief ↗` button.
 
 ### Editable Markdown Source Files
+
 - **Thesis Research Brief Source:** `research-briefs/thesis-research-brief.md`
 - **NILM Research Brief Source:** `research-briefs/nilm-wtal-research-brief.md`
 
 ### Source Traceability Comments
+
 Inside the Markdown source files, hidden HTML comments document the exact page and section in source documents (e.g. `<!-- Source: Thesis Abstract, page 16 -->`). These comments are automatically stripped during PDF compilation and do not appear in the final documents.
 
 ### Regenerating PDFs
+
 To compile the Markdown source files into 1-page PDFs, run:
+
 ```bash
 python scripts/build_research_briefs.py
 ```
+
 This script automatically detects your local Chrome or Edge browser in headless mode, applies academic typography styles with strict 1-page constraints, and validates that each output is exactly 1 page using `pypdf`.
 
 ### Output Locations
+
 - `assets/pdf/research/thesis-research-brief.pdf`
 - `assets/pdf/research/nilm-wtal-research-brief.pdf`
 
@@ -224,7 +253,9 @@ This script automatically detects your local Chrome or Edge browser in headless 
 Each project has its own Markdown file inside the `_projects/` directory.
 
 ### Adding a New Project
+
 Create `_projects/<number>_<project_slug>.md`:
+
 ```markdown
 ---
 layout: page
@@ -237,13 +268,16 @@ github: https://github.com/fahim06128/<repo> # optional
 ---
 
 ### Overview
+
 Detailed explanation of project background, objectives, and problem solved.
 
 ### Key Technical Contributions
+
 - Contribution 1
 - Contribution 2
 
 ### Tools & Technologies
+
 - Python, PyTorch, ESP32, etc.
 ```
 
@@ -254,7 +288,9 @@ Detailed explanation of project background, objectives, and problem solved.
 Publications are stored in `_bibliography/papers.bib` and rendered via `jekyll-scholar`.
 
 ### Adding a New Publication
+
 Add a BibTeX entry in `_bibliography/papers.bib`:
+
 ```bibtex
 @inproceedings{yourkey2026,
   abbr        = {VENUE_ACRONYM},
@@ -270,14 +306,17 @@ Add a BibTeX entry in `_bibliography/papers.bib`:
   selected    = {true}
 }
 ```
-*Your name (`Fahim, Md.`) is automatically highlighted because it matches `scholar.last_name` in `_config.yml`.*
+
+_Your name (`Fahim, Md.`) is automatically highlighted because it matches `scholar.last_name` in `_config.yml`._
 
 ---
 
 ## 7. CV (Web Page & Downloadable PDF)
 
 ### Editing the Web CV
+
 The canonical CV data file is `_data/cv.yml` (RenderCV format). Edit the sections:
+
 - `sections.Education`
 - `sections.Experience`
 - `sections.Publications`
@@ -287,6 +326,7 @@ The canonical CV data file is `_data/cv.yml` (RenderCV format). Edit the section
 - `sections.References`
 
 ### Enabling the Downloadable PDF
+
 1. Ensure your PDF has all private phone numbers and personal home addresses removed.
 2. Place the PDF in `assets/pdf/CV_Md_Fahim.pdf`.
 3. In `_pages/cv.md`, uncomment the `cv_pdf` line:
@@ -315,11 +355,15 @@ To hide a page from the navbar, change `nav: true` to `nav: false`.
 ## 9. Previewing Locally
 
 Run the following command from the repository root:
+
 ```bash
 bundle exec jekyll serve
 ```
+
 Then visit:
+
 ```
 http://localhost:4000/al-folio/
 ```
-*(Note: Always include the `/al-folio/` base path in the URL).*
+
+_(Note: Always include the `/al-folio/` base path in the URL)._
