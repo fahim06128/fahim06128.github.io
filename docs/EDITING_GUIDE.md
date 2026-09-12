@@ -64,11 +64,12 @@ interests:
 ```
 
 #### How to manage homepage content:
-* **Editing Homepage Headline**: Change `headline:` in `_data/profile.yml` and `subtitle:` in `_pages/about.md` to update the concise title line underneath your name (e.g., `BSc in Electrical & Electronic Engineering · BUET`).
-* **Editing Biography Paragraphs**: Modify or add items under `bio:` in `_data/profile.yml`. Each array element (`- "..."`) renders as its own paragraph `<p class="bio-paragraph">`.
-* **Editing Research Interests**: Modify items under `interests:` in `_data/profile.yml`.
-* **Reordering Research Interests**: Simply move lines up or down under `interests:`; the homepage renders them in the exact order specified in this YAML file.
-* **Adding / Removing an Interest**: To add an interest, append `- "New Interest Name"`. To remove an interest, delete or comment out the line. The layout automatically updates and balances with the Education section.
+
+- **Editing Homepage Headline**: Change `headline:` in `_data/profile.yml` and `subtitle:` in `_pages/about.md` to update the concise title line underneath your name (e.g., `BSc in Electrical & Electronic Engineering · BUET`).
+- **Editing Biography Paragraphs**: Modify or add items under `bio:` in `_data/profile.yml`. Each array element (`- "..."`) renders as its own paragraph `<p class="bio-paragraph">`.
+- **Editing Research Interests**: Modify items under `interests:` in `_data/profile.yml`.
+- **Reordering Research Interests**: Simply move lines up or down under `interests:`; the homepage renders them in the exact order specified in this YAML file.
+- **Adding / Removing an Interest**: To add an interest, append `- "New Interest Name"`. To remove an interest, delete or comment out the line. The layout automatically updates and balances with the Education section.
 
 ### 2. Profile Photo (`assets/img/profile/photo1.jpg`)
 
