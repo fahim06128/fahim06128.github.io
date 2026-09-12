@@ -2,22 +2,25 @@
 # Used directly by _pages/about.md to render the primary landing page
 
 name: "Md. Fahim"
-headline: "BSc in Electrical & Electronic Engineering · Communication & Signal Processing · BUET"
+headline: "BSc in Electrical & Electronic Engineering · BUET"
 image: "profile/photo1.jpg"
 department: "Department of EEE"
 institution: "Bangladesh University of Engineering and Technology (BUET)"
 location: "Dhaka, Bangladesh"
 
-# Short academic biography (1-2 paragraphs)
-bio_p1: >
-  I am an undergraduate researcher and final-year student in Electrical and Electronic Engineering at <span class="bio-highlight">Bangladesh University of Engineering and Technology (BUET)</span>, majoring in <span class="bio-highlight">Communication and Signal Processing (CSP)</span>.
-bio_p2: >
-  My research focuses on <span class="bio-highlight">deep learning for biomedical signal processing</span>, physiological time-series modeling, signal denoising, and trustworthy clinical AI. I am particularly interested in developing robust neural representations that preserve vital diagnostic morphology in wearable sensors and clinical decision-support systems.
+# Academic biography (3 paragraphs)
+bio:
+  - "I am a recent graduate in Electrical and Electronic Engineering from Bangladesh University of Engineering and Technology (BUET) majoring in communication and signal processing (CSP). My academic background has given me experience in signal processing, machine learning, embedded systems, and related areas of electrical engineering."
+  - "My research interests include AI for healthcare, biomedical signal processing, robust and trustworthy clinical AI, signal processing, computer vision, edge AI and deployment, and robotics. I am particularly interested in developing reliable learning-based systems and translating algorithmic methods into practical applications."
+  - "During my undergraduate studies, I worked on several research projects and developed a strong foundation in both theoretical concepts and practical implementations. I am passionate about solving complex engineering problems and contributing to cutting-edge research."
 
-# Research Interests (concise list)
+# Research Interests
 interests:
-  - "Deep Learning for Biomedical Signal Processing"
-  - "Signal Denoising & Artifact Removal"
-  - "Physiological Time-Series Modeling"
-  - "Source Separation & Wearable Sensors"
+  - "AI for Healthcare"
+  - "Biomedical Signal Processing"
   - "Robust & Trustworthy Clinical AI"
+  - "Signal Processing"
+  - "Computer Vision"
+  - "Edge AI & Deployment"
+  - "Robotics"
+

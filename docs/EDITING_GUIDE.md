@@ -9,8 +9,8 @@ This guide explains how to edit and maintain your personal academic and research
 | Content Item                      | Source File                             | Description / Key Fields                                                         |
 | :-------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------- |
 | **Name & Professional Title**     | `_config.yml`                           | `first_name`, `last_name`, `title`                                               |
-| **Academic Headline / Subtitle**  | `_data/profile.yml` & `_pages/about.md` | `headline`                                                                       |
-| **Home Bio & Research Interests** | `_data/profile.yml`                     | `bio_p1`, `bio_p2`, `interests`                                                  |
+| **Academic Headline / Subtitle**  | `_data/profile.yml` & `_pages/about.md` | `headline`, `subtitle`                                                           |
+| **Home Bio & Research Interests** | `_data/profile.yml`                     | `bio` (array of paragraphs), `interests` (ordered list)                          |
 | **Profile Photo**                 | `assets/img/profile/photo1.jpg`         | Referenced in `_data/profile.yml` (`image`)                                      |
 | **Social & Contact Links**        | `_data/socials.yml`                     | `email`, `scholar_userid`, `github_username`, `whatsapp_url`                     |
 | **Theme / Color Palette**         | `assets/css/theme.css`                  | Dark navy palette variables (`--page-bg`, `--surface-bg`, etc.)                  |
@@ -34,30 +34,41 @@ The homepage (`/`) is rendered by `_pages/about.md` following a clean academic r
 
 To keep the template clean and maintainable, **all editable homepage content lives in structured YAML files**:
 
-### 1. Biography, Headline, and Interests (`_data/profile.yml`)
+### 1. Headline, Biography, and Research Interests (`_data/profile.yml`)
 
 Edit `_data/profile.yml` to update your core academic narrative:
 
 ```yaml
 name: "Md. Fahim"
-headline: "BSc in Electrical & Electronic Engineering · Communication & Signal Processing · BUET"
+headline: "BSc in Electrical & Electronic Engineering · BUET"
 image: "profile/photo1.jpg"
 department: "Department of EEE"
 institution: "Bangladesh University of Engineering and Technology (BUET)"
 location: "Dhaka, Bangladesh"
 
-bio_p1: >
-  Your first bio paragraph here. You can wrap key phrases in <span class="bio-highlight">highlighted terms</span>.
-bio_p2: >
-  Your second bio paragraph here describing current research focus and future directions.
+# Academic biography paragraphs (rendered sequentially on the homepage)
+bio:
+  - "I am a recent graduate in Electrical and Electronic Engineering from Bangladesh University of Engineering and Technology (BUET) majoring in communication and signal processing (CSP). My academic background has given me experience in signal processing, machine learning, embedded systems, and related areas of electrical engineering."
+  - "My research interests include AI for healthcare, biomedical signal processing, robust and trustworthy clinical AI, signal processing, computer vision, edge AI and deployment, and robotics. I am particularly interested in developing reliable learning-based systems and translating algorithmic methods into practical applications."
+  - "During my undergraduate studies, I worked on several research projects and developed a strong foundation in both theoretical concepts and practical implementations. I am passionate about solving complex engineering problems and contributing to cutting-edge research."
 
+# Research Interests (rendered under 'Research Interests' with cyan triangle bullets ▹)
 interests:
-  - "Deep Learning for Biomedical Signal Processing"
-  - "Signal Denoising & Artifact Removal"
-  - "Physiological Time-Series Modeling"
-  - "Source Separation & Wearable Sensors"
+  - "AI for Healthcare"
+  - "Biomedical Signal Processing"
   - "Robust & Trustworthy Clinical AI"
+  - "Signal Processing"
+  - "Computer Vision"
+  - "Edge AI & Deployment"
+  - "Robotics"
 ```
+
+#### How to manage homepage content:
+* **Editing Homepage Headline**: Change `headline:` in `_data/profile.yml` and `subtitle:` in `_pages/about.md` to update the concise title line underneath your name (e.g., `BSc in Electrical & Electronic Engineering · BUET`).
+* **Editing Biography Paragraphs**: Modify or add items under `bio:` in `_data/profile.yml`. Each array element (`- "..."`) renders as its own paragraph `<p class="bio-paragraph">`.
+* **Editing Research Interests**: Modify items under `interests:` in `_data/profile.yml`.
+* **Reordering Research Interests**: Simply move lines up or down under `interests:`; the homepage renders them in the exact order specified in this YAML file.
+* **Adding / Removing an Interest**: To add an interest, append `- "New Interest Name"`. To remove an interest, delete or comment out the line. The layout automatically updates and balances with the Education section.
 
 ### 2. Profile Photo (`assets/img/profile/photo1.jpg`)
 

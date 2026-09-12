@@ -2,7 +2,7 @@
 layout: about
 title: About Me
 permalink: /
-subtitle: BSc in Electrical & Electronic Engineering &middot; Communication & Signal Processing &middot; BUET
+subtitle: BSc in Electrical & Electronic Engineering &middot; BUET
 
 profile: false
 
@@ -45,13 +45,13 @@ latest_posts:
   </div>
 </div>
 
-<p class="bio-paragraph">{{ site.data.profile.bio_p1 }}</p>
-
-<p class="bio-paragraph">{{ site.data.profile.bio_p2 }}</p>
+{% for p in site.data.profile.bio %}
+  <p class="bio-paragraph">{{ p }}</p>
+{% endfor %}
 
 <div class="about-info-grid">
   <section class="about-info-block">
-    <h2>Interests</h2>
+    <h2>Research Interests</h2>
     <ul class="interests-list">
       {% for interest in site.data.profile.interests %}
         <li>{{ interest }}</li>

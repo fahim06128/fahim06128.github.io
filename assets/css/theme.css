@@ -183,12 +183,12 @@ a:hover {
   box-shadow: 0 3px 8px rgba(77, 184, 216, 0.3);
 }
 
-/* Two-Column Info Grid (Interests & Education) */
+/* Two-Column Info Grid (Research Interests & Education) */
 .about-info-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 3.5rem;
-  margin-top: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2.25rem;
   clear: both;
 }
 
@@ -201,7 +201,7 @@ a:hover {
   padding-bottom: 0.45rem;
 }
 
-/* Interests List */
+/* Research Interests List */
 .about-info-block ul.interests-list {
   list-style: none;
   padding-left: 0;
@@ -211,10 +211,14 @@ a:hover {
 .about-info-block ul.interests-list li {
   position: relative;
   padding-left: 1.25rem;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.42rem;
   color: var(--text-primary);
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.about-info-block ul.interests-list li:last-child {
+  margin-bottom: 0;
 }
 
 .about-info-block ul.interests-list li::before {
