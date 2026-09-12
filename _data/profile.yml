@@ -1,0 +1,23 @@
+# Personal & Academic Profile Data for Homepage
+# Used directly by _pages/about.md to render the primary landing page
+
+name: "Md. Fahim"
+headline: "BSc in Electrical & Electronic Engineering · Communication & Signal Processing · BUET"
+image: "profile/photo1.jpg"
+department: "Department of EEE"
+institution: "Bangladesh University of Engineering and Technology (BUET)"
+location: "Dhaka, Bangladesh"
+
+# Short academic biography (1-2 paragraphs)
+bio_p1: >
+  I am an undergraduate researcher and final-year student in Electrical and Electronic Engineering at <span class="bio-highlight">Bangladesh University of Engineering and Technology (BUET)</span>, majoring in <span class="bio-highlight">Communication and Signal Processing (CSP)</span>.
+bio_p2: >
+  My research focuses on <span class="bio-highlight">deep learning for biomedical signal processing</span>, physiological time-series modeling, signal denoising, and trustworthy clinical AI. I am particularly interested in developing robust neural representations that preserve vital diagnostic morphology in wearable sensors and clinical decision-support systems.
+
+# Research Interests (concise list)
+interests:
+  - "Deep Learning for Biomedical Signal Processing"
+  - "Signal Denoising & Artifact Removal"
+  - "Physiological Time-Series Modeling"
+  - "Source Separation & Wearable Sensors"
+  - "Robust & Trustworthy Clinical AI"

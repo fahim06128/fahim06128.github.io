@@ -1,0 +1,207 @@
+﻿# Portfolio Projects Catalog Generator
+import os
+
+content = """# Portfolio Projects Catalog
+# Structured data source for the categorized horizontal projects page (/projects/)
+
+- id: "automated-transport"
+  category: "Robotics & Vision"
+  importance: 1
+  skills: "Robotics • OpenCV • YOLOv11-seg • ESP32 • A* Search"
+  skills_list:
+    - "Robotics"
+    - "OpenCV"
+    - "YOLOv11-seg"
+    - "ESP32"
+    - "A* Path Planning"
+  title: "Automated Object Transportation System"
+  description: >
+    An autonomous robotic pick-and-drop platform combining overhead computer vision and mobile edge robotics. The system tracks dynamic objects and robot coordinates via overhead camera feeds, executes instance segmentation on moving obstacles, and transmits optimized collision-free trajectories to an ESP32 robot in real time.
+  images:
+    - src: "/assets/img/projects/automated-transport/overhead_workspace.png"
+      alt: "Overhead vision-guided tracking workspace and ArUco localization arena."
+      caption: "Overhead Vision Workspace & ArUco Pose Tracking"
+    - src: "/assets/img/projects/automated-transport/astar_path.png"
+      alt: "A* collision-free path planning trajectory avoiding dynamic obstacle zones."
+      caption: "A* Path Planning with Dynamic Obstacle Avoidance"
+    - src: "/assets/img/projects/automated-transport/chassis_gripper.png"
+      alt: "Custom 3D-printed mobile robot chassis with servo-driven gripper mechanism."
+      caption: "Custom 3D-Printed Robot Chassis & Servo Gripper"
+  buttons:
+    ppt: "/assets/pdf/projects/automated_object_transportation_presentation.pptx"
+    demo: "/assets/video/projects/automated_transport_demo.mp4"
+    demo_type: "video"
+
+- id: "hive-r"
+  category: "Robotics & Vision"
+  importance: 2
+  skills: "Autonomous Drones • ROS • Visual SLAM • YOLOv8 Nano • Pixhawk • Raspberry Pi"
+  skills_list:
+    - "Autonomous Drones"
+    - "ROS"
+    - "Visual SLAM"
+    - "YOLOv8 Nano"
+    - "Pixhawk"
+    - "Raspberry Pi 4"
+  title: "HIVE-R: Swarm Drone System for GPS-Denied Rescue"
+  description: >
+    A bio-inspired autonomous swarm drone framework engineered for search-and-rescue operations in flood disasters and GPS-denied environments. Powered by an onboard Raspberry Pi 4 companion computer and Pixhawk flight controller, the drone performs visual odometry mapping and edge neural detection of stranded humans in degraded visibility.
+  images:
+    - src: "/assets/img/projects/hive-r/drone_platform.png"
+      alt: "Assembled quadcopter drone platform with Pixhawk autopilot and Raspberry Pi companion computer."
+      caption: "Assembled Quadcopter Platform & Avionics Architecture"
+    - src: "/assets/img/projects/hive-r/vslam_target_detection.png"
+      alt: "Real-time edge YOLOv8 detection and Visual SLAM feature tracking interface."
+      caption: "Visual SLAM Odometry & Real-Time Edge Target Detection"
+  buttons:
+    report: "/assets/pdf/projects/hive_r_report.pdf"
+    ppt: "/assets/pdf/projects/hive_r_presentation.pptx"
+    demo: "/assets/video/projects/hive_r_demo.mp4"
+    demo_type: "video"
+
+- id: "camera-style-transfer"
+  category: "Deep Learning & Vision"
+  importance: 1
+  skills: "Generative Vision • StarGAN v2 • PyTorch • Latent Space Analysis"
+  skills_list:
+    - "Generative Vision"
+    - "StarGAN v2"
+    - "PyTorch"
+    - "Latent Space Analysis"
+  title: "Camera-to-Camera Style Transfer"
+  description: >
+    A deep generative framework exploring cross-domain image translation between distinct physical camera sensors using StarGAN v2. By isolating sensor-specific color science, lens vignetting, and noise signatures, the network synthesizes authentic cross-camera image representations without requiring paired multi-camera captures.
+  images:
+    - src: "/assets/img/projects/camera-style-transfer/style_transfer_results.png"
+      alt: "Qualitative camera-to-camera style translation results across distinct camera sensor models."
+      caption: "Qualitative Cross-Sensor Style Transfer Comparison"
+    - src: "/assets/img/projects/camera-style-transfer/tsne_latent_embedding.png"
+      alt: "t-SNE latent space cluster visualization showing learned domain-specific style vectors."
+      caption: "t-SNE Visualization of Disentangled Style Embeddings"
+    - src: "/assets/img/projects/camera-style-transfer/loss_curves_training.png"
+      alt: "Generator and discriminator training loss convergence profiles over epochs."
+      caption: "Training Loss Convergence & Generator Dynamics"
+  buttons:
+    report: "/assets/pdf/projects/camera_style_transfer_report.pdf"
+    github: "https://github.com/fahim06128/Camera-to-Camera-Style-Transfer"
+
+- id: "smart-energy-meter"
+  category: "Embedded Systems & IoT"
+  importance: 1
+  skills: "Embedded Systems • Arduino • SIM800L GSM • Power Sensing • Relay Automation"
+  skills_list:
+    - "Embedded Systems"
+    - "Arduino"
+    - "SIM800L GSM"
+    - "Power Sensing"
+    - "Relay Automation"
+  title: "Smart Prepaid Energy Meter with Recharging System"
+  description: >
+    An IoT-enabled digital energy metering and automated billing system designed to eliminate manual meter readings and automate electricity management. The device features continuous high-precision AC power monitoring, wireless SMS prepaid recharge authentication, and automated relay disconnection when credits expire.
+  images:
+    - src: "/assets/img/projects/smart-energy-meter/energy_meter_hardware.png"
+      alt: "Assembled smart prepaid energy meter prototype with LCD readout and relay cutoff."
+      caption: "Assembled Smart Energy Meter Prototype & LCD Interface"
+    - src: "/assets/img/projects/smart-energy-meter/gsm_sensing_circuit.png"
+      alt: "Microcontroller, power supply, and SIM800L GSM wireless communication circuitry."
+      caption: "Power Sensing Subsystem & GSM Wireless Controller Circuit"
+  buttons:
+    report: "/assets/pdf/projects/smart_prepaid_energy_meter_report.pdf"
+    demo: "/assets/video/projects/smart_energy_meter_demo.mp4"
+    demo_type: "video"
+    github: "https://github.com/fahim06128/GSM-Based-Smart-Prepaid-Energy-Meter-with-Recharging-System"
+
+- id: "smart-walking-stick"
+  category: "Embedded Systems & IoT"
+  importance: 2
+  skills: "Embedded Systems • Sensor Fusion • GSM/GPS • Haptic Feedback • Assistive Tech"
+  skills_list:
+    - "Embedded Systems"
+    - "Sensor Fusion"
+    - "GSM/GPS"
+    - "Haptic Feedback"
+    - "Assistive Tech"
+  title: "IoT-Based Smart Walking Stick for Visually Impaired"
+  description: >
+    An assistive embedded mobility system designed to enhance navigation safety and situational awareness for the visually impaired and elderly. Featuring multi-zone ultrasonic obstacle detection, ground moisture sensing, real-time GPS tracking, and automatic SOS emergency dispatch over cellular networks.
+  images:
+    - src: "/assets/img/projects/smart-walking-stick/walking_stick_prototype.png"
+      alt: "Ergonomic walking stick assembly with ultrasonic sensors, buzzer, and control enclosure."
+      caption: "Smart Walking Stick Physical Prototype & Sensor Array"
+    - src: "/assets/img/projects/smart-walking-stick/sensor_assembly.png"
+      alt: "Ultrasonic transducer array and moisture detection probe mounted at the base."
+      caption: "Ultrasonic Ranging Transducers & Tip Moisture Sensor"
+    - src: "/assets/img/projects/smart-walking-stick/circuit_schematic.png"
+      alt: "Complete electronic circuit schematic showing microcontroller, GPS, GSM, and haptics."
+      caption: "Complete System Schematic & Microcontroller Interfacing"
+  buttons:
+    report: "/assets/pdf/projects/smart_walking_stick_report.pdf"
+    ppt: "/assets/pdf/projects/smart_walking_stick_presentation.pdf"
+
+- id: "two-player-pong"
+  category: "Digital Systems & Hardware"
+  importance: 1
+  skills: "Digital Design • Verilog HDL • CPLD • Quartus II • Finite State Machines"
+  skills_list:
+    - "Digital Design"
+    - "Verilog HDL"
+    - "CPLD"
+    - "Quartus II"
+    - "Finite State Machines"
+  title: "Two-Player Pong Game on CPLD"
+  description: >
+    A fully hardware-synthesized, real-time interactive two-player Pong video game implemented purely at the gate and register-transfer level in Verilog HDL. Deployed on an Altera MAX II CPLD development board, the system drives an 8x8 LED dot matrix display via high-speed row-column multiplexing with zero CPU or software overhead.
+  images:
+    - src: "/assets/img/projects/pong-cpld/pong_cpld_setup.png"
+      alt: "Altera MAX II CPLD development board wired to 8x8 LED dot matrix and player controllers."
+      caption: "CPLD Development Board & Hardware Test Bench Setup"
+    - src: "/assets/img/projects/pong-cpld/led_matrix_display.png"
+      alt: "8x8 LED dot matrix displaying active paddles and bouncing ball during live hardware gameplay."
+      caption: "Real-Time 8x8 LED Matrix Display During Gameplay"
+    - src: "/assets/img/projects/pong-cpld/fsm_state_diagram.png"
+      alt: "Finite State Machine state transition diagram governing game logic and collision cycles."
+      caption: "Finite State Machine (FSM) Collision & Game Logic Diagram"
+    - src: "/assets/img/projects/pong-cpld/game_architecture.png"
+      alt: "Digital RTL architecture block diagram showing clock dividers, registers, and multiplexer."
+      caption: "RTL Module Interconnection & Multiplexing Architecture"
+  buttons:
+    report: "/assets/pdf/projects/two_player_pong_report.pdf"
+    ppt: "/assets/pdf/projects/two_player_pong_presentation.pptx"
+    demo: "https://www.youtube.com/watch?v=KwgmoqzcpjU"
+    demo_type: "youtube"
+    github: "https://github.com/fahim06128/Two-Player-Pong-Game-on-CPLD"
+
+- id: "duplex-lifi-comm"
+  category: "Digital Systems & Hardware"
+  importance: 2
+  skills: "Optical Communications • Li-Fi • Optoelectronics • Analog Transceiver • Circuit Design"
+  skills_list:
+    - "Optical Communications"
+    - "Li-Fi"
+    - "Optoelectronics"
+    - "Analog Transceiver"
+    - "Circuit Design"
+  title: "Duplex Communication Using Li-Fi"
+  description: >
+    A bidirectional optical wireless communication (Li-Fi) transceiver system utilizing visible light to simultaneously transmit and receive analog audio and digital telemetry. The design achieves full-duplex transmission over free space using optical isolation, eliminating electromagnetic interference common in RF channels.
+  images:
+    - src: "/assets/img/projects/lifi-comm/lifi_transceiver_hardware.png"
+      alt: "Physical breadboard prototype of the dual-channel Li-Fi optical transceiver."
+      caption: "Dual-Channel Li-Fi Optical Transceiver Hardware Assembly"
+    - src: "/assets/img/projects/lifi-comm/system_block_diagram.png"
+      alt: "System architecture block diagram showing transmitter, optical channel, and receiver stages."
+      caption: "Full-Duplex Li-Fi System Block Architecture"
+    - src: "/assets/img/projects/lifi-comm/transmitter_circuit.png"
+      alt: "Analog LED driver and modulation circuit schematic."
+      caption: "Optical Transmitter Driver & Modulation Circuitry"
+    - src: "/assets/img/projects/lifi-comm/oscilloscope_waveform.png"
+      alt: "Oscilloscope capture demonstrating transmitted versus received waveform reproduction."
+      caption: "Signal Integrity & Transmitted vs. Received Waveform Verification"
+  buttons:
+    report: "/assets/pdf/projects/duplex_lifi_communication_report.pdf"
+"""
+
+with open('_data/projects.yml', 'w', encoding='utf-8') as f:
+    f.write(content.strip() + '\n')
+
+print('Regenerated _data/projects.yml with exact github links only.')

@@ -1,0 +1,46 @@
+# Research Projects and Investigations
+# Structured data source for the Research showcase page (/research/)
+
+- id: "thesis"
+  type_label: "UNDERGRADUATE THESIS"
+  title: "Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection"
+  institution: "Bangladesh University of Engineering and Technology (BUET)"
+  period: "2025–2026"
+  supervisor: "Dr. Md. Kamrul Hasan"
+  summary: >
+    Electrocardiogram (ECG) recordings in ambulatory and clinical monitoring are frequently corrupted by baseline wander, muscle noise, and electrode motion artifacts. Conventional filtering often distorts critical P-Q-R-S-T wave morphology, undermining diagnostic reliability. This thesis investigates deep neural network denoising to recover clean cardiac signals from severe noise while preserving the clinically vital waveform properties necessary for downstream arrhythmia interpretation.
+  bullets:
+    - "Investigated deep learning denoising across non-stationary ambulatory noise artifacts while preventing over-smoothing of diagnostically critical P-wave, QRS-complex, and ST-segment morphology."
+    - "Evaluated reconstruction quality and waveform similarity across 35,000+ benchmark segments under controlled signal-to-noise ratios and cross-dataset conditions."
+    - "Validated clinical utility on downstream tasks, demonstrating that morphology preservation recovers missed cardiac beats on Icentia 11K and improves arrhythmia classification accuracy."
+  images:
+    - src: "/assets/img/research/thesis/ecg-reconstruction-waveform.png"
+      alt: "Qualitative waveform comparison: raw noise-corrupted ECG versus morphology-preserved denoised output."
+      caption: "Raw vs. Denoised Waveform Reconstruction"
+    - src: "/assets/img/research/thesis/ecg-snr-performance.png"
+      alt: "Quantitative reconstruction metrics (PRD, output SNR, PCC, WDI) evaluated across varying input SNR intervals."
+      caption: "Denoising Performance vs. Input SNR"
+    - src: "/assets/img/research/thesis/ecg-noise-robustness.png"
+      alt: "Model robustness across baseline wander, muscle artifact, electrode motion, and mixed noise."
+      caption: "Robustness Across Non-Stationary Noise Artifacts"
+  brief_pdf: "/assets/pdf/research/thesis-research-brief.pdf"
+  action_label: "View Research Brief ↗"
+
+- id: "nilm-wtal"
+  type_label: "ONGOING RESEARCH"
+  title: "Weakly Supervised Temporal Action Localization for Non-Intrusive Load Monitoring"
+  institution: "Bangladesh University of Engineering and Technology (BUET)"
+  period: "2025–Present"
+  supervisor: ""
+  summary: >
+    Non-Intrusive Load Monitoring (NILM) aims to disaggregate individual appliance power consumption from a household's aggregate smart-meter readings. Existing deep learning approaches rely heavily on fine-grained submetered ground truth, which is intrusive and cost-prohibitive to acquire. This ongoing research explores weakly supervised temporal action localization (WTAL) to identify appliance activation intervals from aggregate power series using only coarse household-level presence indicators.
+  bullets:
+    - "Investigating appliance activation detection and event localization directly from aggregate smart-meter time-series without sub-metered sensors."
+    - "Exploring weak supervision paradigms to train models using only household-level appliance ownership and binary presence indicators."
+    - "Studying how temporal action localization and class activation mechanisms can be adapted from computer vision to energy disaggregation."
+  images:
+    - src: "/assets/img/research/nilm-wtal/nilm_wtal_pipeline.svg"
+      alt: "Conceptual framework of weakly supervised temporal action localization for non-intrusive load monitoring."
+      caption: "Weakly Supervised NILM Disaggregation Framework"
+  brief_pdf: "/assets/pdf/research/nilm-wtal-research-brief.pdf"
+  action_label: "View Research Brief ↗"

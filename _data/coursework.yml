@@ -1,0 +1,27 @@
+- category: "Artificial Intelligence, Signal Processing & Biomedical"
+  courses:
+    - "Artificial Intelligence and Machine Learning"
+    - "Digital Signal Processing I"
+    - "Random Signals and Processes"
+    - "Introduction to Medical Imaging"
+
+- category: "Embedded Systems, Robotics & Control"
+  courses:
+    - "Microprocessors and Embedded Systems"
+    - "Robotics and Automation"
+    - "Control Systems I"
+
+- category: "Communication & Wireless Systems"
+  courses:
+    - "Communication Systems I"
+    - "Communication Systems II"
+    - "Wireless Communications"
+    - "Optical Communications"
+    - "Radar and Satellite Communication"
+
+- category: "Power & Electronics"
+  courses:
+    - "Power System I"
+    - "Power Electronics"
+    - "Solid State Devices"
+    - "Digital Electronics I"

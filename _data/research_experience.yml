@@ -1,0 +1,15 @@
+- title: "Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection"
+  role: "Undergraduate Thesis Researcher"
+  institution: "Bangladesh University of Engineering and Technology (BUET)"
+  department: "Department of Electrical and Electronic Engineering (EEE)"
+  location: "Dhaka, Bangladesh"
+  start_date: "Jun. 2025"
+  end_date: "July 2026"
+  status: "Undergraduate Thesis"
+  description: "Investigating deep learning architectures and multi-component loss formulations for robust single-lead ECG denoising, artifact removal, and morphology preservation in downstream arrhythmia detection."
+  contributions:
+    - "Architected **MorphoUFormer**, a novel deep-learning framework combining multiscale convolutional patch encoding, gated U-shaped skip connections, a Transformer bottleneck, and a residual refinement network for single-lead ECG reconstruction."
+    - "Formulated a **Multi-Component Loss Function** integrating time-domain Huber loss, normalized spectral magnitude loss, and temporal gradient/curvature loss to actively prevent the over-smoothing of clinically vital segments (P-wave, QRS complex, ST-segment)."
+  outcomes:
+    - "<strong>R-Peak Validation (Icentia 11K dataset):</strong> Recovered 193,524 missed beats, boosting Pan-Tompkins R-peak detection recall from 69.98% to 87.77%."
+    - "<strong>Arrhythmia Classification (Georgia ECG dataset):</strong> Achieved 94.1% single-lead classification accuracy, driving a +31.47% F1 score improvement for the minority Atrial Fibrillation class."

@@ -1,34 +1,79 @@
 ---
 layout: about
-title: about
+title: About Me
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: BSc in Electrical & Electronic Engineering &middot; Communication & Signal Processing &middot; BUET
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+profile: false
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<div class="profile float-right">
+  <div class="profile-card">
+    <img src="{{ site.data.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ site.data.profile.name }}" class="profile-img-custom">
+    <div class="profile-affiliation">
+      <p>{{ site.data.profile.department }}</p>
+      <p>{{ site.data.profile.institution }}</p>
+      <p>{{ site.data.profile.location }}</p>
+    </div>
+    <div class="profile-social-compact">
+      <div class="contact-icons">
+        {% if site.data.socials.email %}
+          <a href="mailto:{{ site.data.socials.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        {% endif %}
+        {% if site.data.socials.scholar_userid %}
+          <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a>
+        {% endif %}
+        {% if site.data.socials.github_username %}
+          <a href="https://github.com/{{ site.data.socials.github_username }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        {% endif %}
+        {% if site.data.socials.whatsapp_url %}
+          <a href="{{ site.data.socials.whatsapp_url }}" title="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<p class="bio-paragraph">{{ site.data.profile.bio_p1 }}</p>
+
+<p class="bio-paragraph">{{ site.data.profile.bio_p2 }}</p>
+
+<div class="about-info-grid">
+  <section class="about-info-block">
+    <h2>Interests</h2>
+    <ul class="interests-list">
+      {% for interest in site.data.profile.interests %}
+        <li>{{ interest }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="about-info-block">
+    <h2>Education</h2>
+    <div class="education-list">
+      {% for item in site.data.education %}
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <strong>{{ item.degree }}</strong>
+            <span class="edu-inst">{{ item.institution }}</span>
+            <span class="edu-meta">{{ item.start_date }} &ndash; {{ item.end_date }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
