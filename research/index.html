@@ -4,34 +4,102 @@
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://fahim06128.github.io/research/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Md.</span> Fahim </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About Me </a> </li> <li class="nav-item "> <a class="nav-link" href="/education/">Education </a> </li> <li class="nav-item active"> <a class="nav-link" href="/research/">Research <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Research</h1> <p class="post-description"></p> </header> <article> <link rel="stylesheet" href="/assets/css/theme.css"> <div class="research-showcase-container"> <article class="research-card" id="thesis"> <div class="research-card-inner"> <div class="research-media-col"> <div class="research-gallery" id="gallery-thesis" data-total-slides="3"> <div class="gallery-track"> <div class="gallery-slide active"> <div class="gallery-img-wrapper"> <img src="/assets/img/research/thesis/ecg-reconstruction-waveform.png" alt="Qualitative waveform comparison: raw noise-corrupted ECG versus morphology-preserved denoised output." class="gallery-img" loading="lazy"> </div> <div class="gallery-caption">Raw vs. Denoised Waveform Reconstruction</div> </div> <div class="gallery-slide "> <div class="gallery-img-wrapper"> <img src="/assets/img/research/thesis/ecg-snr-performance.png" alt="Quantitative reconstruction metrics (PRD, output SNR, PCC, WDI) evaluated across varying input SNR intervals." class="gallery-img" loading="lazy"> </div> <div class="gallery-caption">Denoising Performance vs. Input SNR</div> </div> <div class="gallery-slide "> <div class="gallery-img-wrapper"> <img src="/assets/img/research/thesis/ecg-noise-robustness.png" alt="Model robustness across baseline wander, muscle artifact, electrode motion, and mixed noise." class="gallery-img" loading="lazy"> </div> <div class="gallery-caption">Robustness Across Non-Stationary Noise Artifacts</div> </div> </div> <div class="gallery-controls"> <button type="button" class="gallery-btn prev" aria-label="Previous image" onclick="moveSlide('gallery-thesis', -1)"> <i class="fa-solid fa-chevron-left"></i> </button> <div class="gallery-indicators"> <button type="button" class="gallery-dot active" aria-label="Slide 1" onclick="goToSlide('gallery-thesis', 0)"></button> <button type="button" class="gallery-dot " aria-label="Slide 2" onclick="goToSlide('gallery-thesis', 1)"></button> <button type="button" class="gallery-dot " aria-label="Slide 3" onclick="goToSlide('gallery-thesis', 2)"></button> </div> <button type="button" class="gallery-btn next" aria-label="Next image" onclick="moveSlide('gallery-thesis', 1)"> <i class="fa-solid fa-chevron-right"></i> </button> </div> </div> </div> <div class="research-content-col"> <div class="research-type-tag">UNDERGRADUATE THESIS</div> <h2 class="research-card-title">Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection</h2> <div class="research-card-meta"> <div> <strong>Bangladesh University of Engineering and Technology (BUET)</strong> • 2025–2026</div> <div class="meta-supervisor">Supervisor: <strong>Dr. Md. Kamrul Hasan</strong> </div> </div> <p class="research-summary-para">Electrocardiogram (ECG) recordings in ambulatory and clinical monitoring are frequently corrupted by baseline wander, muscle noise, and electrode motion artifacts. Conventional filtering often distorts critical P-Q-R-S-T wave morphology, undermining diagnostic reliability. This thesis investigates deep neural network denoising to recover clean cardiac signals from severe noise while preserving the clinically vital waveform properties necessary for downstream arrhythmia interpretation. </p> <ul class="research-bullets-list"> <li>Investigated deep learning denoising across non-stationary ambulatory noise artifacts while preventing over-smoothing of diagnostically critical P-wave, QRS-complex, and ST-segment morphology.</li> <li>Evaluated reconstruction quality and waveform similarity across 35,000+ benchmark segments under controlled signal-to-noise ratios and cross-dataset conditions.</li> <li>Validated clinical utility on downstream tasks, demonstrating that morphology preservation recovers missed cardiac beats on Icentia 11K and improves arrhythmia classification accuracy.</li> </ul> <div class="research-action-row"> <a href="/assets/pdf/research/thesis-research-brief.pdf" target="_blank" rel="noopener noreferrer" class="research-brief-btn"> <i class="fa-regular fa-file-pdf mr-1"></i> View Research Brief ↗ </a> </div> </div> </div> </article> <article class="research-card" id="nilm-wtal"> <div class="research-card-inner"> <div class="research-media-col"> <div class="research-gallery" id="gallery-nilm-wtal" data-total-slides="1"> <div class="gallery-track"> <div class="gallery-slide active"> <div class="gallery-img-wrapper"> <img src="/assets/img/research/nilm-wtal/nilm_wtal_pipeline.svg" alt="Conceptual framework of weakly supervised temporal action localization for non-intrusive load monitoring." class="gallery-img" loading="lazy"> </div> <div class="gallery-caption">Weakly Supervised NILM Disaggregation Framework</div> </div> </div> </div> </div> <div class="research-content-col"> <div class="research-type-tag">ONGOING RESEARCH</div> <h2 class="research-card-title">Weakly Supervised Temporal Action Localization for Non-Intrusive Load Monitoring</h2> <div class="research-card-meta"> <div> <strong>Bangladesh University of Engineering and Technology (BUET)</strong> • 2025–Present</div> </div> <p class="research-summary-para">Non-Intrusive Load Monitoring (NILM) aims to disaggregate individual appliance power consumption from a household's aggregate smart-meter readings. Existing deep learning approaches rely heavily on fine-grained submetered ground truth, which is intrusive and cost-prohibitive to acquire. This ongoing research explores weakly supervised temporal action localization (WTAL) to identify appliance activation intervals from aggregate power series using only coarse household-level presence indicators. </p> <ul class="research-bullets-list"> <li>Investigating appliance activation detection and event localization directly from aggregate smart-meter time-series without sub-metered sensors.</li> <li>Exploring weak supervision paradigms to train models using only household-level appliance ownership and binary presence indicators.</li> <li>Studying how temporal action localization and class activation mechanisms can be adapted from computer vision to energy disaggregation.</li> </ul> <div class="research-action-row"> <a href="/assets/pdf/research/nilm-wtal-research-brief.pdf" target="_blank" rel="noopener noreferrer" class="research-brief-btn"> <i class="fa-regular fa-file-pdf mr-1"></i> View Research Brief ↗ </a> </div> </div> </div> </article> </div> <script>
-function moveSlide(galleryId, direction) {
-  const gallery = document.getElementById(galleryId);
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Md.</span> Fahim </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About Me </a> </li> <li class="nav-item "> <a class="nav-link" href="/education/">Education </a> </li> <li class="nav-item active"> <a class="nav-link" href="/research/">Research <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Research</h1> <p class="post-description"></p> </header> <article> <link rel="stylesheet" href="/assets/css/theme.css"> <div class="research-showcase-container"> <article class="research-card" id="thesis"> <div class="research-card-inner"> <div class="research-content-col"> <div class="research-header-group"> <div class="research-type-tag">UNDERGRADUATE THESIS (ONGOING FOR PUBLICATION)</div> <h2 class="research-card-title">Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection</h2> <div class="research-card-meta"> <div> <strong>Bangladesh University of Engineering and Technology (BUET)</strong> • 2025–2026</div> <div class="meta-supervisor">Supervisor: <strong>Dr. Md. Kamrul Hasan, Professor, Department of EEE, BUET</strong> </div> </div> </div> <p class="research-desc">Ambulatory ECG recordings are frequently corrupted by baseline wander, muscle artifacts, and electrode motion that distort critical P-Q-R-S-T wave morphology. This research develops MorphoUFormer, a multiscale deep architecture with gated skip connections, a Transformer bottleneck, and a multi-component morphology-preserving loss to clean signals while preserving vital diagnostic waveforms for downstream arrhythmia classification.</p> <div class="research-btn-group"> <a href="/assets/pdf/research/thesis-research-brief.pdf" target="_blank" rel="noopener noreferrer" class="research-brief-btn"> <i class="fa-regular fa-file-pdf mr-1"></i> View Research Brief </a> </div> </div> <div class="research-media-col" id="media-thesis" onmouseenter="pauseResearchCycle('thesis')" onmouseleave="resumeResearchCycle('thesis')"> <div class="research-gallery" id="gallery-thesis" data-total="3"> <div class="research-slides-wrapper"> <div class="research-slide active" data-index="0"> <img src="/assets/img/research/morphology/Capture.png" alt="ECG waveform morphology showing P, Q, R, S, T waves and PR/QT intervals" class="research-slide-img" loading="lazy"> </div> <div class="research-slide " data-index="1"> <img src="/assets/img/research/morphology/2.png" alt="Three types of ECG noise: baseline wander, muscle artifact, and electrode motion" class="research-slide-img" loading="lazy"> </div> <div class="research-slide " data-index="2"> <img src="/assets/img/research/morphology/3.png" alt="Qualitative waveform comparison: raw preprocessed vs. MorphoUFormer denoised ECG" class="research-slide-img" loading="lazy"> </div> </div> <div class="research-dash-group" aria-label="Photo preview dashes"> <button type="button" class="research-dash active" aria-label="View photo 1" onclick="selectResearchSlide('thesis', 0)" onmouseenter="selectResearchSlide('thesis', 0)"> </button> <button type="button" class="research-dash " aria-label="View photo 2" onclick="selectResearchSlide('thesis', 1)" onmouseenter="selectResearchSlide('thesis', 1)"> </button> <button type="button" class="research-dash " aria-label="View photo 3" onclick="selectResearchSlide('thesis', 2)" onmouseenter="selectResearchSlide('thesis', 2)"> </button> </div> <button type="button" class="research-gallery-nav prev" aria-label="Previous photo" onclick="stepResearchSlide('thesis', -1)"> <i class="fa-solid fa-chevron-left"></i> </button> <button type="button" class="research-gallery-nav next" aria-label="Next photo" onclick="stepResearchSlide('thesis', 1)"> <i class="fa-solid fa-chevron-right"></i> </button> <div class="research-caption-tag" id="caption-thesis">ECG Waveform Morphology &amp; Characteristic Intervals</div> </div> </div> </div> </article> <article class="research-card" id="nilm"> <div class="research-card-inner"> <div class="research-content-col"> <div class="research-header-group"> <div class="research-type-tag">ONGOING RESEARCH</div> <h2 class="research-card-title">Weakly Supervised Temporal Action Localization for Non-Intrusive Load Monitoring</h2> <div class="research-card-meta"> <div> <strong>Bangladesh University of Engineering and Technology (BUET)</strong> • 2025–Present</div> <div class="meta-supervisor">Supervisor: <strong>Dr. Md. Kamrul Hasan</strong> </div> </div> </div> <p class="research-desc">Non-Intrusive Load Monitoring (NILM) aims to disaggregate individual appliance electricity consumption from aggregate household smart-meter readings. This research investigates Weakly Supervised Temporal Action Localization (WTAL) to accurately identify activation boundaries and duration from aggregate power series using only coarse household-level presence indicators, eliminating costly sub-metered annotations.</p> <div class="research-btn-group"> <a href="/assets/pdf/research/nilm-wtal-research-brief.pdf" target="_blank" rel="noopener noreferrer" class="research-brief-btn"> <i class="fa-regular fa-file-pdf mr-1"></i> View Research Brief </a> </div> </div> <div class="research-media-col" id="media-nilm" onmouseenter="pauseResearchCycle('nilm')" onmouseleave="resumeResearchCycle('nilm')"> <div class="research-gallery" id="gallery-nilm" data-total="2"> <div class="research-slides-wrapper"> <div class="research-slide active" data-index="0"> <img src="/assets/img/research/nilm/Capture.png" alt="Individual appliance power consumption versus aggregate household smart meter reading" class="research-slide-img" loading="lazy"> </div> <div class="research-slide " data-index="1"> <img src="/assets/img/research/nilm/2.png" alt="Weakly supervised per-timestamp appliance localization framework from aggregate electricity series" class="research-slide-img" loading="lazy"> </div> </div> <div class="research-dash-group" aria-label="Photo preview dashes"> <button type="button" class="research-dash active" aria-label="View photo 1" onclick="selectResearchSlide('nilm', 0)" onmouseenter="selectResearchSlide('nilm', 0)"> </button> <button type="button" class="research-dash " aria-label="View photo 2" onclick="selectResearchSlide('nilm', 1)" onmouseenter="selectResearchSlide('nilm', 1)"> </button> </div> <button type="button" class="research-gallery-nav prev" aria-label="Previous photo" onclick="stepResearchSlide('nilm', -1)"> <i class="fa-solid fa-chevron-left"></i> </button> <button type="button" class="research-gallery-nav next" aria-label="Next photo" onclick="stepResearchSlide('nilm', 1)"> <i class="fa-solid fa-chevron-right"></i> </button> <div class="research-caption-tag" id="caption-nilm">Submetered Appliance Consumption vs. Aggregate Household Load</div> </div> </div> </div> </article> </div> <script>
+// Research Photo Auto-Slide Carousel Controller
+const researchTimers = {};
+const researchCaptions = {
+  
+    "thesis": [
+      
+        "ECG Waveform Morphology &amp; Characteristic Intervals",
+      
+        "Three Types of Ambulatory Noise: BW, MA, and EM",
+      
+        "Qualitative Waveform Evaluation: Raw vs. MorphoUFormer Denoised"
+      
+    ],
+  
+    "nilm": [
+      
+        "Submetered Appliance Consumption vs. Aggregate Household Load",
+      
+        "Weakly Supervised Action Localization from Coarse Appliance Labels"
+      
+    ]
+  
+};
+
+function selectResearchSlide(researchId, index) {
+  const gallery = document.getElementById('gallery-' + researchId);
   if (!gallery) return;
-  const slides = gallery.querySelectorAll('.gallery-slide');
-  if (slides.length <= 1) return;
-  
-  let activeIndex = 0;
+
+  const slides = gallery.querySelectorAll('.research-slide');
+  const dashes = gallery.querySelectorAll('.research-dash');
+  const captionTag = document.getElementById('caption-' + researchId);
+
   slides.forEach((s, idx) => {
-    if (s.classList.contains('active')) activeIndex = idx;
+    s.classList.toggle('active', idx === index);
   });
-  
-  let newIndex = (activeIndex + direction + slides.length) % slides.length;
-  goToSlide(galleryId, newIndex);
+  dashes.forEach((d, idx) => {
+    d.classList.toggle('active', idx === index);
+  });
+
+  if (captionTag && researchCaptions[researchId] && researchCaptions[researchId][index]) {
+    captionTag.textContent = researchCaptions[researchId][index];
+  }
 }
 
-function goToSlide(galleryId, targetIndex) {
-  const gallery = document.getElementById(galleryId);
+function stepResearchSlide(researchId, delta) {
+  const gallery = document.getElementById('gallery-' + researchId);
   if (!gallery) return;
-  const slides = gallery.querySelectorAll('.gallery-slide');
-  const dots = gallery.querySelectorAll('.gallery-dot');
-  
+
+  const slides = gallery.querySelectorAll('.research-slide');
+  if (slides.length <= 1) return;
+
+  let currentIdx = 0;
   slides.forEach((s, idx) => {
-    s.classList.toggle('active', idx === targetIndex);
+    if (s.classList.contains('active')) currentIdx = idx;
   });
-  dots.forEach((d, idx) => {
-    d.classList.toggle('active', idx === targetIndex);
+
+  const nextIdx = (currentIdx + delta + slides.length) % slides.length;
+  selectResearchSlide(researchId, nextIdx);
+}
+
+function startResearchSlider(researchId, delay) {
+  if (researchTimers[researchId]) clearInterval(researchTimers[researchId]);
+  researchTimers[researchId] = setInterval(() => {
+    stepResearchSlide(researchId, 1);
+  }, delay || 2800);
+}
+
+function pauseResearchCycle(researchId) {
+  if (researchTimers[researchId]) {
+    clearInterval(researchTimers[researchId]);
+    researchTimers[researchId] = null;
+  }
+}
+
+function resumeResearchCycle(researchId) {
+  startResearchSlider(researchId, 2800);
+}
+
+function initResearchAutoSliders() {
+  const galleries = document.querySelectorAll('.research-gallery');
+  galleries.forEach((gallery, index) => {
+    const total = parseInt(gallery.getAttribute('data-total') || '1', 10);
+    if (total <= 1) return;
+    const researchId = gallery.id.replace('gallery-', '');
+    // Slightly stagger transitions so multiple cards cycle gracefully
+    const delay = 2600 + (index % 4) * 400;
+    startResearchSlider(researchId, delay);
   });
+}
+
+// Auto-start slideshow immediately on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initResearchAutoSliders);
+} else {
+  initResearchAutoSliders();
 }
 </script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Md. Fahim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
   window.alFolio = {
