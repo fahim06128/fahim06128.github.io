@@ -5,7 +5,7 @@
   type_label: "UNDERGRADUATE THESIS (ONGOING FOR PUBLICATION)"
   title: "Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection"
   institution: "Bangladesh University of Engineering and Technology (BUET)"
-  period: "2025–2026"
+  period: "2025–Present"
   supervisor: "Dr. Md. Kamrul Hasan, Professor, Department of EEE, BUET"
   summary: "Ambulatory ECG recordings are frequently corrupted by baseline wander, muscle artifacts, and electrode motion that distort critical P-Q-R-S-T wave morphology. This research develops MorphoUFormer, a multiscale deep architecture with gated skip connections, a Transformer bottleneck, and a multi-component morphology-preserving loss to clean signals while preserving vital diagnostic waveforms for downstream arrhythmia classification."
   images:
@@ -26,7 +26,7 @@
   title: "Weakly Supervised Temporal Action Localization for Non-Intrusive Load Monitoring"
   institution: "Bangladesh University of Engineering and Technology (BUET)"
   period: "2025–Present"
-  supervisor: "Dr. Md. Kamrul Hasan"
+  supervisor: ""
   summary: "Non-Intrusive Load Monitoring (NILM) aims to disaggregate individual appliance electricity consumption from aggregate household smart-meter readings. This research investigates Weakly Supervised Temporal Action Localization (WTAL) to accurately identify activation boundaries and duration from aggregate power series using only coarse household-level presence indicators, eliminating costly sub-metered annotations."
   images:
     - src: "/assets/img/research/nilm/Capture.png"
