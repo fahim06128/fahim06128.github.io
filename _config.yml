@@ -690,9 +690,4 @@ third_party_libraries:
 #   - data: resume
 #     json: assets/json/resume.json
 
-# -----------------------------------------------------------------------------
-# Exclude private files and scratch scripts from build output
-# -----------------------------------------------------------------------------
-exclude:
-  - private-input
 
