@@ -24,6 +24,9 @@ nav_order: 2
               {% if item.supervisor and item.supervisor != "" %}
                 <div class="meta-supervisor">Supervisor: <strong>{{ item.supervisor }}</strong></div>
               {% endif %}
+              {% if item.gpa and item.gpa != "" %}
+                <div class="meta-gpa">Thesis GPA: <strong>{{ item.gpa }}</strong></div>
+              {% endif %}
             </div>
           </div>
 

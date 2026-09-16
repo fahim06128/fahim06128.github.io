@@ -14,7 +14,7 @@ This guide explains how to edit and maintain your personal academic and research
 | **Profile Photo**                 | `assets/img/profile/photo1.jpg`         | Referenced in `_data/profile.yml` (`image`)                                      |
 | **Social & Contact Links**        | `_data/socials.yml`                     | `email`, `scholar_userid`, `github_username`, `whatsapp_url`                     |
 | **Theme / Color Palette**         | `assets/css/theme.css`                  | Dark navy palette variables (`--page-bg`, `--surface-bg`, etc.)                  |
-| **Education Entries & Degrees**   | `_data/education.yml`                   | `institution`, `degree`, `major`, `cgpa`, `major_gpa`, `dates`, `thesis`, `logo` |
+| **Education Entries & Degrees**   | `_data/education.yml`                   | `institution`, `degree`, `major`, `cgpa`, `major_gpa`, `dates`, `thesis`, `thesis_gpa`, `logo` |
 | **Relevant Coursework**           | `_data/coursework.yml`                  | `category`, `courses`                                                            |
 | **Certificates**                  | `_data/certificates.yml`                | `title`, `issuer`, `date`, `credential_id`, `credential_url`, `pdf`              |
 | **Research Experience**           | `_data/research_experience.yml`         | `title`, `role`, `institution`, `contributions`, `outcomes`                      |
@@ -112,6 +112,7 @@ All degrees and academic qualifications are managed in `_data/education.yml`:
   cgpa: "3.44 / 4.00"
   major_gpa: "3.81 / 4.00"
   thesis: "Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection"
+  thesis_gpa: "4.00 / 4.00"
 ```
 
 #### Changing Institution Logos
@@ -125,11 +126,13 @@ All degrees and academic qualifications are managed in `_data/education.yml`:
 
 - **Overall CGPA**: Update `cgpa: "3.44 / 4.00"`
 - **Major GPA**: Update `major_gpa: "3.81 / 4.00"`
+- **Thesis GPA**: Update `thesis_gpa: "4.00 / 4.00"` (renders immediately after the thesis title as `(GPA: 4.00 / 4.00)`)
 - **General GPA (e.g. for high school)**: Update `gpa: "5.00 / 5.00"`
 
-#### Changing Undergraduate Thesis Title
+#### Changing Undergraduate Thesis Title & GPA
 
 - Update `thesis: "Your New Thesis Title"` in the corresponding institution block.
+- Update `thesis_gpa: "4.00 / 4.00"` to display the grade alongside the thesis.
 
 #### Optional Fields
 
@@ -216,7 +219,7 @@ All content is decoupled into `_data/research.yml` and rendered dynamically by `
 
 - **Change Thesis Title:** Edit the `title` field under `id: thesis`.
 - **Change Supervisor:** Edit the `supervisor` field under `id: thesis` (e.g. `supervisor: "Dr. Md. Kamrul Hasan"`).
-- **Edit Three Bullets:** Modify the 3 list items under `bullets:` for either entry (`thesis` or `nilm-wtal`).
+- **Change Thesis GPA:** Edit the `gpa` field under `id: thesis` (e.g. `gpa: "4.00 / 4.00"`).
 - **Edit Summary Paragraph:** Edit the `summary:` field (keep between 45–70 words for optimal visual balance).
 - **Replace Thesis Carousel Image:**
   1. Add the new image to `assets/img/research/thesis/<image-name>.png`.

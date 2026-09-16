@@ -65,6 +65,9 @@ nav_order: 1
             <div class="edu-thesis-block">
               <span class="edu-thesis-label">Undergraduate Thesis:</span>
               <span class="edu-thesis-title">{{ item.thesis }}</span>
+              {% if item.thesis_gpa %}
+                <span class="edu-thesis-gpa">(GPA: <strong class="edu-metric-strong">{{ item.thesis_gpa }}</strong>)</span>
+              {% endif %}
             </div>
           {% endif %}
         </div>

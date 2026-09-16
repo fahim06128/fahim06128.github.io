@@ -10,6 +10,7 @@
   cgpa: "3.44 / 4.00"
   major_gpa: "3.81 / 4.00"
   thesis: "Morphology-Aware ECG Denoising Using Deep Neural Networks for Arrhythmia Detection"
+  thesis_gpa: "4.00 / 4.00"
 
 - institution: "Notre Dame College"
   short_name: "NDC"
