@@ -6,25 +6,25 @@ This guide explains how to edit and maintain your personal academic and research
 
 ## 1. Quick Reference: Where to Edit What
 
-| Content Item                      | Source File                             | Description / Key Fields                                                         |
-| :-------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------- |
-| **Name & Professional Title**     | `_config.yml`                           | `first_name`, `last_name`, `title`                                               |
-| **Academic Headline / Subtitle**  | `_data/profile.yml` & `_pages/about.md` | `headline`, `subtitle`                                                           |
-| **Home Bio & Research Interests** | `_data/profile.yml`                     | `bio` (array of paragraphs), `interests` (ordered list)                          |
-| **Profile Photo**                 | `assets/img/profile/photo1.jpg`         | Referenced in `_data/profile.yml` (`image`)                                      |
-| **Social & Contact Links**        | `_data/socials.yml`                     | `email`, `scholar_userid`, `github_username`, `whatsapp_url`                     |
-| **Theme / Color Palette**         | `assets/css/theme.css`                  | Dark navy palette variables (`--page-bg`, `--surface-bg`, etc.)                  |
+| Content Item                      | Source File                             | Description / Key Fields                                                                       |
+| :-------------------------------- | :-------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| **Name & Professional Title**     | `_config.yml`                           | `first_name`, `last_name`, `title`                                                             |
+| **Academic Headline / Subtitle**  | `_data/profile.yml` & `_pages/about.md` | `headline`, `subtitle`                                                                         |
+| **Home Bio & Research Interests** | `_data/profile.yml`                     | `bio` (array of paragraphs), `interests` (ordered list)                                        |
+| **Profile Photo**                 | `assets/img/profile/photo1.jpg`         | Referenced in `_data/profile.yml` (`image`)                                                    |
+| **Social & Contact Links**        | `_data/socials.yml`                     | `email`, `scholar_userid`, `github_username`, `whatsapp_url`                                   |
+| **Theme / Color Palette**         | `assets/css/theme.css`                  | Dark navy palette variables (`--page-bg`, `--surface-bg`, etc.)                                |
 | **Education Entries & Degrees**   | `_data/education.yml`                   | `institution`, `degree`, `major`, `cgpa`, `major_gpa`, `dates`, `thesis`, `thesis_gpa`, `logo` |
-| **Relevant Coursework**           | `_data/coursework.yml`                  | `category`, `courses`                                                            |
-| **Certificates**                  | `_data/certificates.yml`                | `title`, `issuer`, `date`, `credential_id`, `credential_url`, `pdf`              |
-| **Research Experience**           | `_data/research_experience.yml`         | `title`, `role`, `institution`, `contributions`, `outcomes`                      |
-| **Projects (Individual)**         | `_projects/<project_name>.md`           | Project frontmatter (`title`, `img`, `category`) and body                        |
-| **Projects Landing Page**         | `_pages/projects.md`                    | Category tabs, display order                                                     |
-| **Publications (BibTeX)**         | `_bibliography/papers.bib`              | BibTeX entries (`@inproceedings`, `@article`), `selected={true}`                 |
-| **Author Highlighting**           | `_config.yml`                           | `scholar.last_name`, `scholar.first_name`                                        |
-| **CV Data (Web View)**            | `_data/cv.yml`                          | Canonical RenderCV format (Education, Experience, Skills, etc.)                  |
-| **CV PDF Download**               | `_pages/cv.md`                          | Uncomment `cv_pdf: /assets/pdf/<file>.pdf` after placing sanitized PDF           |
-| **Navigation Order**              | `_pages/*.md`                           | `nav: true`, `nav_order: 1..6`                                                   |
+| **Relevant Coursework**           | `_data/coursework.yml`                  | `category`, `courses`                                                                          |
+| **Certificates**                  | `_data/certificates.yml`                | `title`, `issuer`, `date`, `credential_id`, `credential_url`, `pdf`                            |
+| **Research Experience**           | `_data/research_experience.yml`         | `title`, `role`, `institution`, `contributions`, `outcomes`                                    |
+| **Projects (Individual)**         | `_projects/<project_name>.md`           | Project frontmatter (`title`, `img`, `category`) and body                                      |
+| **Projects Landing Page**         | `_pages/projects.md`                    | Category tabs, display order                                                                   |
+| **Publications (BibTeX)**         | `_bibliography/papers.bib`              | BibTeX entries (`@inproceedings`, `@article`), `selected={true}`                               |
+| **Author Highlighting**           | `_config.yml`                           | `scholar.last_name`, `scholar.first_name`                                                      |
+| **CV Data (Web View)**            | `_data/cv.yml`                          | Canonical RenderCV format (Education, Experience, Skills, etc.)                                |
+| **CV PDF Download**               | `_pages/cv.md`                          | Uncomment `cv_pdf: /assets/pdf/<file>.pdf` after placing sanitized PDF                         |
+| **Navigation Order**              | `_pages/*.md`                           | `nav: true`, `nav_order: 1..6`                                                                 |
 
 ---
 
