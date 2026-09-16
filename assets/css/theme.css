@@ -457,6 +457,13 @@ footer.fixed-bottom {
   font-style: italic;
 }
 
+.edu-thesis-gpa {
+  font-style: normal;
+  color: var(--text-secondary);
+  margin-left: 0.35rem;
+  white-space: nowrap;
+}
+
 /* Relevant Coursework Grid */
 .coursework-grid {
   display: grid;
@@ -724,10 +731,15 @@ footer.fixed-bottom {
   color: var(--text-primary, #EAF2F8);
 }
 
-.meta-supervisor {
+.meta-supervisor,
+.meta-gpa {
   font-size: 0.82rem;
   color: #8CE0F5;
   margin-top: 0.15rem;
+}
+
+.meta-gpa strong {
+  color: var(--accent, #4DB8D8);
 }
 
 .research-desc {
