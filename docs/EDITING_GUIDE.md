@@ -9,6 +9,7 @@ This guide explains how to edit and maintain your personal academic and research
 | Content Item                      | Source File                             | Description / Key Fields                                                                       |
 | :-------------------------------- | :-------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | **Name & Professional Title**     | `_config.yml`                           | `first_name`, `last_name`, `title`                                                             |
+| **Website Logo & Favicon**        | `assets/img/logo.png` & `_config.yml`   | `icon`, `apple_touch_icon`                                                                     |
 | **Academic Headline / Subtitle**  | `_data/profile.yml` & `_pages/about.md` | `headline`, `subtitle`                                                                         |
 | **Home Bio & Research Interests** | `_data/profile.yml`                     | `bio` (array of paragraphs), `interests` (ordered list)                                        |
 | **Profile Photo**                 | `assets/img/profile/photo1.jpg`         | Referenced in `_data/profile.yml` (`image`)                                                    |

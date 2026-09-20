@@ -9,6 +9,7 @@ This document maps every visible section and element on the website to its corre
 | Visible Section / Element       | Source File(s)                                    | Notes                                                                                                                |
 | :------------------------------ | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------- |
 | **Site Name & Title in Navbar** | `_config.yml` (`first_name`, `last_name`)         | Appears top-left on non-home pages.                                                                                  |
+| **Website Logo & Favicon**      | `assets/img/logo.png`, `_config.yml` (`icon`)     | Brand logo displayed in navbar brand on subpages and as browser tab favicon/bookmark.                                |
 | **Top Navigation Links**        | `_pages/*.md` (`title`, `nav: true`, `nav_order`) | Sorted by `nav_order`: About Me (1), Education (2), Research Experience (3), Projects (4), Publications (5), CV (6). |
 | **Dark Navy Academic Theme**    | `assets/css/theme.css`                            | Defines CSS custom properties (`--page-bg`, `--surface-bg`, etc.) and styles navbar, cards, and body.                |
 | **Theme Toggle (Light/Dark)**   | `_config.yml` (`enable_darkmode`)                 | Handled automatically by `al_folio_core`.                                                                            |
